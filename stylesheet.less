@@ -1,0 +1,174 @@
+@import "@{templateCommon}/basekit-bootstrap.less";
+
+// Mixins
+.border-radius(@radius) {
+	-webkit-border-radius:	@radius;
+	-moz-border-radius:	@radius;
+	border-radius:		@radius;
+}
+
+// Wrapper 
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+    	width: 960px;
+    	margin: 3em auto 10em;
+    }
+}
+
+// Tyopgraphy
+h1 {
+	display: inline-block;
+	padding: 0;
+	background-color: @color-swatch3;
+	.border-radius(50%);
+	min-width: 260px;
+	background: @color-swatch1; /* Old browsers */
+	background: -moz-linear-gradient(left,  @color-swatch1 5%, @color-swatch3 10%, @color-swatch3 90%, @color-swatch1 95%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,@color-swatch1), color-stop(10%,@color-swatch3), color-stop(90%,@color-swatch3), color-stop(95%,@color-swatch1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  @color-swatch1 5%,@color-swatch3 10%,@color-swatch3 90%,@color-swatch1 95%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  @color-swatch1 5%,@color-swatch3 10%,@color-swatch3 90%,@color-swatch1 95%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  @color-swatch1 5%,@color-swatch3 10%,@color-swatch3 90%,@color-swatch1 95%); /* IE10+ */
+	background: linear-gradient(to right,  @color-swatch1 5%,@color-swatch3 10%,@color-swatch3 90%,@color-swatch1 95%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color-swatch1', endColorstr='@color-swatch1',GradientType=1 ); /* IE6-9 */
+}
+
+h3 {
+	@media @mobile {
+		font-size: bkscale(@font-swatch3-font-size,0.8);
+		line-height: bkscale(@font-swatch3-line-height,0.8);
+	}
+}
+
+// Header
+header.template-header {
+	text-align: center;
+}
+
+// Logo
+.logo {
+	display: inline-block;
+	img {
+		border: 20px solid @color-swatch1;
+	}
+}
+
+// Border
+.page-content {
+	margin-top: -100px;
+	padding: 100px 5em 5em;
+	.border-radius(20px);
+	border: 5px dashed @color-swatch3;
+	@media @mobile {
+		border: 0;
+		padding: 100px 1em 3em;
+	}
+}
+
+// Menu
+.widget {
+	&.menu {
+		.wrapper {
+			width: inherit;
+			margin: 0;
+		}
+		// Centered Elements
+		.menu-header,
+		.inner-item,
+		.menu-subsection-header {
+			text-align: center;
+		}
+		// Menu Header
+		.menu-header {
+			margin: 0 0 1em;
+			h1 {
+				margin: 0 0 14px;
+			}
+		}
+		.menu-description {
+			font-size: 22px;
+			letter-spacing: -1px;
+			font-weight: 700;
+		}
+		// Menu Items 
+		.menu-items {
+			column-count: 1;
+			column-gap: 0;
+			-moz-column-count: 1;
+			-moz-column-gap: 0;
+			-webkit-column-count: 1;
+			-webkit-column-gap: 0;
+			li {
+				padding: 0;
+			}
+		}
+		// Menu Images
+		.menu-item-image-wrap {
+			margin: 1em 0 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 250px;
+			background-position: center;
+			img {
+				display: none;
+			}
+	    }
+	    // Item Name
+	    .menu-item-name {
+	    	display: inline-block;
+	    	margin-right: 6px;
+	    	padding: 0;
+	    	@media @mobile {
+	    		margin-right: 0;
+	    	}
+	    }
+	    .menu-item-price {
+	    	display: inline-block;
+	    	@media @mobile {
+	    		display: block;
+	    		margin: .7em;
+	    	}
+	    }
+	    // Price
+		.standard-price {
+			font-family: @font-swatch3-font-family;
+			font-size: @font-swatch3-font-size;
+			font-weight: 700;
+			line-height: @font-swatch3-line-height;
+			letter-spacing: @font-swatch3-letter-spacing;
+			color: @color-swatch3;
+			@media @mobile {
+				font-size: bkscale(@font-swatch3-font-size,0.8);
+				line-height: bkscale(@font-swatch3-line-height,0.8);
+			}
+		}
+		// Menu Subsection
+		.menu-subsection {
+			background-color: @color-swatch2;
+			border: 1px solid darken(@color-swatch2,10%);
+			.border-radius(10px);
+			.menu-subsection-header {
+				border-bottom: 1px solid darken(@color-swatch2,10%);
+				margin: 0 0 2em;
+				padding: 0 0 1.5em;
+				.menu-subsection-name {
+					font-size: 26px;
+					letter-spacing: -1px;
+					font-weight: 700;
+				}
+			}
+		}
+		// Menu Note
+		.menu-note {
+			font-size: 14px;
+			font-weight: 700;
+			text-align: right;
+			@media @mobile {
+				margin: 0 0 2em;
+			}
+		}
+	}
+}
+
