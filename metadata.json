@@ -1,7 +1,7 @@
 {
 	"name":"Wet Template",
-	"thumbnail":"wet.png",
-	"screenshot":"wet.png",
+	"thumbnail":"wet-template.png",
+	"screenshot":"wet-template.png",
     "tags": { "en": ["minimal", "clean"] },
     "pageTypes":["home", "menu"],
     "colorSwatches":
