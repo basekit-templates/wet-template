@@ -21,7 +21,7 @@
 // Tyopgraphy
 h1 {
 	display: inline-block;
-	padding: 0;
+	padding: 0 30px;
 	background-color: @color-swatch3;
 	.border-radius(50%);
 	min-width: 260px;
@@ -60,7 +60,8 @@ header.template-header {
 	margin-top: -100px;
 	padding: 100px 5em 5em;
 	.border-radius(20px);
-	border: 5px dashed @color-swatch3;
+	border: 2px dashed #41bfd4;
+	box-shadow: 0px 0px 0 5px #fff, 0 0 0 8px #41bfd4;
 	@media @mobile {
 		border: 0;
 		padding: 100px 1em 3em;
@@ -73,6 +74,9 @@ header.template-header {
 		.wrapper {
 			width: inherit;
 			margin: 0;
+		}
+		.main {
+			padding: 0 0 3em;
 		}
 		// Centered Elements
 		.menu-header,
@@ -93,7 +97,9 @@ header.template-header {
 			font-weight: 700;
 		}
 		// Menu Items 
-		.menu-items {
+		.menu-items,
+		.menu-items.odd,
+		.menu-items.even {
 			column-count: 1;
 			column-gap: 0;
 			-moz-column-count: 1;
@@ -146,11 +152,11 @@ header.template-header {
 		}
 		// Menu Subsection
 		.menu-subsection {
-			background-color: @color-swatch2;
-			border: 1px solid darken(@color-swatch2,10%);
+			border: 2px dashed @color-swatch3;
+			box-shadow: 0px 0px 0 5px @color-swatch1, 0 0 0 8px @color-swatch3;
+			margin: 1.5em 0 3em;
 			.border-radius(10px);
 			.menu-subsection-header {
-				border-bottom: 1px solid darken(@color-swatch2,10%);
 				margin: 0 0 2em;
 				padding: 0 0 1.5em;
 				.menu-subsection-name {
