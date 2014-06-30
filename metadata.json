@@ -3,7 +3,7 @@
 	"thumbnail":"wet-template.png",
 	"screenshot":"wet-template.png",
     "tags": { "en": ["minimal", "clean"] },
-    "pageTypes":["home", "menu"],
+    "pageTypes":["home"],
     "colorSwatches":
     {
         "Swatch 1": {
@@ -72,9 +72,9 @@
         },
         "font3": {
             "font-family": "\"Quicksand\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "28px",
+            "font-size": "25px",
             "font-weight": "inherit",
-            "line-height": "34px",
+            "line-height": "36px",
             "color": "@color-swatch4",
             "letter-spacing": "-2px"
         },
