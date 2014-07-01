@@ -94,7 +94,8 @@ header.template-header {
 				margin: 0 0 14px;
 			}
 		}
-		.menu-description {
+		.menu-description,
+		.menu-subsection-description {
 			font-size: 22px;
 			letter-spacing: -1px;
 			font-weight: 700;
@@ -157,14 +158,21 @@ header.template-header {
 		.menu-subsection {
 			border: 2px dashed lighten(@color-swatch3,20%);
 			margin: 4.5em 0 3em;
+			.menu-items,
+			.menu-subsection-header {
+				position: relative;
+				top: -54px;
+			}
+			.menu-items {
+				top: -20px;
+			}
 			.border-radius(10px);
 			.menu-subsection-header {
-				margin: 0 0 -1em;
+				margin: 0;
 				padding: 0;
 			}
 			.menu-subsection-name {
-				position: relative;
-				top: -54px;
+				margin-bottom: 20px;
 			}
 			.menu-item-name,
 			.menu-item-price {
