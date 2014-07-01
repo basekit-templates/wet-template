@@ -1,5 +1,12 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+body {
+	margin-bottom: 100px;
+	@media @mobile {
+		margin-bottom: 50px;
+	}
+}
+
 // Mixins
 .border-radius(@radius) {
 	-webkit-border-radius:	@radius;
