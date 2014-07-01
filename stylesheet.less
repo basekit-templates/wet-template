@@ -36,6 +36,11 @@ h1,
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color-swatch1', endColorstr='@color-swatch1',GradientType=1 ); /* IE6-9 */
 	color: @font-swatch1-color;
 	font-weight: @font-swatch1-font-weight;
+	@media @mobile {
+		padding: 14px 30px;
+		min-width: 100%;
+		line-height: 24px;
+	}
 }
 
 h3 {
@@ -67,6 +72,7 @@ header.template-header {
 	box-shadow: 0px 0px 0 5px #fff, 0 0 0 8px @color-swatch3;
 	@media @mobile {
 		border: 0;
+		box-shadow: none;
 		padding: 100px 1em 3em;
 	}
 }
@@ -99,6 +105,9 @@ header.template-header {
 			font-size: 22px;
 			letter-spacing: -1px;
 			font-weight: 700;
+			@media @mobile {
+				font-size: 18px;
+			}
 		}
 		// Menu Items 
 		.menu-items,
@@ -151,7 +160,7 @@ header.template-header {
 			color: @color-swatch3;
 			@media @mobile {
 				font-size: bkscale(@font-swatch3-font-size,0.8);
-				line-height: bkscale(@font-swatch3-line-height,0.8);
+				line-height: bkscale(@font-swatch3-line-height,0.5);
 			}
 		}
 		// Menu Subsection
@@ -162,6 +171,9 @@ header.template-header {
 			.menu-subsection-header {
 				position: relative;
 				top: -54px;
+				@media @mobile {
+					top: -36px;
+				}
 			}
 			.menu-items {
 				top: -20px;
